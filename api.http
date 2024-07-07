@@ -1,0 +1,40 @@
+### Traer todos los articulos 
+GET  http://localhost:3000/articulos
+
+
+### traer todos los articulos o de una categoria
+
+GET  http://localhost:3000/articulos?categoria=accesorios
+
+
+
+### Traer un producto por id
+
+GET http://localhost:3000/articulos/66817819e1dd0ace70bca8ff
+
+
+### Agregar un articulo
+POST http://localhost:3000/articulos
+Content-Type: application/json
+
+{
+    "codigo": 55,
+    "nombre": "Parlanteeeeee",
+    "precio": 100,
+    "categoria": "Accesorios"
+    
+}
+
+### Actualizar un articulo 
+
+
+
+PUT http://localhost:3000/articulos/66817d90fc83b75d67860fc9
+Content-Type: application/json
+
+{
+    "codigo": 666,
+    "nombre": "Parlanteeeeee",
+    "precio": 200,
+    "categoria": "Accesorios"
+}
