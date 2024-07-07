@@ -128,6 +128,30 @@ app.put('/articulos/:id', (req, res) => {
       });
 });
 
+// Eliminar un articulo
+
+app.delete('/articulos/:id', (req, res) => {
+  const { id } = req.params;
+
+  // Verificar si el id es un ObjectId válido
+  if (!ObjectId.isValid(id)) {
+    return res.status(400).send('ID inválido');
+  }
+
+  Articulos.findByIdAndDelete(id)
+   .then(art => {
+      if (!art) {
+        console.log('No se encontró el artículo');
+        return res.status(404).send('No se encontró el artículo');
+      }
+      res.json(art);  // Enviar el artículo eliminado como respuesta JSON
+    })
+   .catch(error => {
+      console.error('Error al eliminar el artículo', error);
+      res.status(500).send('Error al eliminar el artículo');
+    });
+});
+
 
 
 

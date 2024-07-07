@@ -38,3 +38,8 @@ Content-Type: application/json
     "precio": 200,
     "categoria": "Accesorios"
 }
+
+
+### Eliminar un articulo
+
+DELETE http://localhost:3000/articulos/667a2532530f9384dce220f4
