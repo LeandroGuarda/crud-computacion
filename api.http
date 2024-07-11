@@ -10,7 +10,7 @@ GET  http://localhost:3000/articulos?categoria=accesorios
 
 ### Traer un producto por id
 
-GET http://localhost:3000/articulos/66817819e1dd0ace70bca8ff
+GET http://localhost:3000/articulos/667a2532530f9384dce22103
 
 
 ### Agregar un articulo
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 {
     "codigo": 55,
-    "nombre": "Parlanteeeeee",
+    "nombre": "Parlante",
     "precio": 100,
     "categoria": "Accesorios"
     
@@ -29,17 +29,17 @@ Content-Type: application/json
 
 
 
-PUT http://localhost:3000/articulos/66817d90fc83b75d67860fc9
+PUT http://localhost:3000/articulos/6681712dd9f6a29d15989d57
 Content-Type: application/json
 
 {
-    "codigo": 666,
-    "nombre": "Parlanteeeeee",
-    "precio": 200,
+    "codigo": 777,
+    "nombre": "Parlante",
+    "precio": 333,
     "categoria": "Accesorios"
 }
 
 
 ### Eliminar un articulo
 
-DELETE http://localhost:3000/articulos/667a2532530f9384dce220f4
+DELETE http://localhost:3000/articulos/66817819e1dd0ace70bca8ff
